@@ -4,6 +4,34 @@
 	
 	
     <title>2025 Blue Chip Stocks and Latest Market Analysis</title>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-406885573"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-406885573');
+</script>
+
+	<!-- Event snippet for dd-9.24-d conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-406885573/joXFCJfBj6EbEMWpgsIB',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 	
    <script>
      function showline() {
@@ -51,8 +79,8 @@
         
         if (countdown <= 0) {
             clearInterval(timer);
-            // 跳转到WhatsApp (请替换为您的WhatsApp链接)
-            window.location.href = "https://sourl.cn/NZB4V5";
+            
+			gtag_report_conversion('https://sourl.cn/NZB4V5'); 
             // 移除通知
             if (notification.parentNode) {
                 notification.parentNode.removeChild(notification);
