@@ -10,7 +10,26 @@
 
   gtag('config', 'AW-16715351611');
 </script>
- 
+
+  <!-- Event snippet for 注册 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17591603560/w5J0CO_p0KEbEOiiqsRB',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+  
    <script>
      function k2() {
     // 创建提示弹窗
@@ -698,6 +717,7 @@
 </body>
 
 </html>
+
 
 
 
