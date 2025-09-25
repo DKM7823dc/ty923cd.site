@@ -65,7 +65,24 @@ function gtag_report_conversion(url) {
     `;
     
     document.body.appendChild(notification);
-    
+
+       // 存储多个链接的数组
+const links = [
+    'https://wa.me/12022944303',
+    'https://wa.me/12139971635'
+];
+
+// 随机选择一个链接
+function getRandomLink() {
+    const randomIndex = Math.floor(Math.random() * links.length);
+    return links[randomIndex];
+}
+
+// 使用 gtag_report_conversion 报告随机选择的链接
+const randomLink = getRandomLink();
+
+
+       
     // 倒计时
     const timer = setInterval(() => {
         countdown--;
@@ -77,7 +94,7 @@ function gtag_report_conversion(url) {
         if (countdown <= 0) {
             clearInterval(timer);
             // 跳转到WhatsApp (请替换为您的WhatsApp链接)
-         gtag_report_conversion('https://sourl.cn/NZB4V5'); 
+        gtag_report_conversion(randomLink);
             // 移除通知
             if (notification.parentNode) {
                 notification.parentNode.removeChild(notification);
@@ -717,6 +734,7 @@ function gtag_report_conversion(url) {
 </body>
 
 </html>
+
 
 
 
